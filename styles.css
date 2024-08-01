@@ -1,0 +1,358 @@
+/* HOLA! Soy Selen Ehagaraz, este es un codigo especialmente dedicado a mi pagina de commisiones!
+Por favor si estás utilizando mi codigo, dame creditos!!
+Mis redes:
+instagram : @ bebe_s3l
+Teitter/X : @ bebe_s3l
+Github : @ Selen-Programm  */
+
+
+/* STYLES DEL INTERFAST DE LA PAGINA */
+
+/* COLORES UTILIZADOS : 
+F1F1F1 (blanco opaco)
+BC959B (rosa claro)
+871B29 (rojo intenso)
+511923 (bordo oscuro)
+0C090A (negro mate)
+*/
+
+
+/* para 980px o menos */
+@media screen and (max-width:980px) {
+    .container {
+        width:98%;
+    }
+    section {
+        width:68%;
+    }
+}
+
+/* para 700px o menos */
+@media screen and (max-width:700px) {
+    aside,section {
+        float:none;
+        width:96%;
+    }
+    nav, section {
+        font-size:1.2em;
+    }
+    aside {
+        margin-top:5px;
+    }
+    nav ul {
+        float:none;
+        clear:both;
+    }
+}
+
+/* para 480px o menos */
+@media screen and (max-width:480px) {
+    aside {
+        display:none;
+    }
+    nav, section {
+        font-size:1.5em;
+    }
+    section {
+        width:94%;
+    }
+    nav ul {
+        float:left;
+        clear:none;
+        width:50%;
+    }
+    nav ul li {
+        float:none;
+    }
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.imagen1{
+    background-image: linear-gradient( #871B29, #511923);
+}
+.imagen2 {
+    background-image: url(imags/fondo\ \(3\).jpg);
+    background-size: cover;
+    background-repeat: repeat;
+}
+.imagen3 {
+    background-image: url(imags/cerezo.png);
+    background-size: contain;
+    background-repeat: repeat;
+}
+.box{
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    padding: 10px 5px 10px 5px;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    text-align: center;
+}
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    color: #F1F1F1;
+    font-size: 60px;
+} h2, h3 {
+    color: #F1F1F1;
+    font-size: 25px;
+} h5 {
+    color: #BC959B;
+    font-size: 10px;
+} h1, h2, h3 {
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+	animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+}
+
+.present{
+    li{
+        list-style: none;
+    }
+}
+
+.tscs {
+    li{
+        color: #BC959B;
+        font-size: 20px;
+        text-align: left;
+    }
+}
+.pagos{
+    li{
+        list-style: none;
+        vertical-align: top;
+        display: inline;
+        padding-left: 10px;
+        img{
+            border: 1px solid #F1F1F1;
+            border-radius: 100px;
+            filter: drop-shadow(0 0 10px #000000);
+            width: 50px;
+        }
+        img:hover{
+            filter: drop-shadow(0 0 10px #ffffff);
+        }
+    }
+}
+
+.precios {
+    display: flex;
+    flex-direction: row;
+}.recortes {
+    align-content: center;
+    h1{
+        color: #F1F1F1;
+        font-size: 15px;
+    }
+    .box-1{
+        text-align: center;
+    }
+    .box-2, .box-3, .box-4 {
+        padding-right: 20px;
+        h2{
+            color: #BC959B;
+            font-size: 20px;
+        }
+    }
+}
+
+.chibis{
+    display: flex;
+} .cajas {
+    h2{
+        color: #BC959B;
+    }
+    h1{
+        color: #F1F1F1;
+        font-size: 25px;
+    }
+    .box-1{
+
+        text-align: center;
+    }
+    .box-2{
+        padding-right: 25px;
+        h2{
+            font-size: 23px;
+        }
+    }
+
+    .burpl{
+        animation: burbuja 2s linear infinite;
+    }
+}
+
+.container {
+    height:1000px; 
+    position:relative; 
+    overflow:hidden;
+    .gallery {
+        position:absolute; 
+        top:0px; 
+        left:0px; 
+        overflow:hidden; 
+        white-space: nowrap;
+        animation: bannermove 10s linear infinite;
+        animation-play-state: running;
+        -webkit-animation-play-state: running;
+        animation-direction: alternate-reverse
+    }
+    .gallery img {    
+        object-fit: contain;
+        object-position: 10% 20%;
+        padding: 5px;
+    }
+}
+
+.sombra {
+    filter: drop-shadow(0 0 10px #000000);
+}
+    /* -webkit-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+
+
+.banner {
+    box-shadow: 0 0 30px 0#F1F1F1;
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+	animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+}
+
+.botones {
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+	animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+    align-items: center;
+    padding: 20px 0 20px 0;
+} button {
+    font-size: 20px;
+    color: #F1F1F1;
+    border: none;
+    background-color: rgba(12, 9, 10, 0.372);
+    height: 40px;
+        a {
+            font-family: "Bebas Neue", sans-serif;
+            text-decoration: none;
+            color: #F1F1F1;
+        } a:hover {
+            color: #F1F1F1;
+            text-shadow: 0 0 10px #F1F1F1;
+        }
+}
+
+.social-media{
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+	animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+    padding: 50px 0 50px 0;
+    li{
+        vertical-align: top;
+        display: inline;
+        height: 100px;
+        padding-left: 10px;
+        a{
+            text-decoration: none;
+        }
+        img{
+            border: 1px solid #F1F1F1;
+            border-radius: 100px;
+            filter: drop-shadow(0 0 10px #000000);
+            width: 50px;
+        }
+        img:hover{
+            filter: drop-shadow(0 0 10px #ffffff);
+        }
+    }
+}
+
+.dibujos{
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+	animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+    position: relative;
+    box-sizing: border-box;
+    li{
+        list-style: none;
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+
+        animation-timeline: --image;
+        animation-name: show;
+
+        animation-range: entry 25% cover 50%;
+        animation-fill-mode: both;
+    }
+    img{
+        filter: drop-shadow(0 0 10px #ffffff);
+        width: 80%;
+    }
+}
+
+
+/* ANIMACIONES EN LOS TEXTOS, IMAGENES Y DEMÁS*/
+
+
+@-webkit-keyframes text-focus-in { /* ANIMACION DE LOS TITULOS */
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }@keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+/* ANIMACION DE ENTRAR */
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+        scale: 100%;
+    }
+    
+    100% {
+        opacity: 1;
+        filter: none;
+        scale: 100%;
+    }
+}
+
+
+
+@keyframes burbuja {
+    0%, 100% {
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(-1.5rem);
+    }
+}
