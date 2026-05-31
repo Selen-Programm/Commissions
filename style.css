@@ -1,0 +1,769 @@
+/* --- VARIABLES DE COLORES (Tus colores obligatorios) --- */
+:root {
+    --vino: #6f1417;
+    /* Texto principal y acentos fuertes */
+    --rosa-polvo: #b5868a;
+    /* Botones y detalles lindos */
+    --beige-claro: #eae9e7;
+    /* Fondo general */
+    --blanco-roto: #eeeeed;
+    /* Fondo de tarjetas */
+    --taupe: #bdb6ac;
+    /* Bordes y detalles suaves */
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Desplazamiento suave al hacer clic */
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    /* Fuente redonda y cute */
+    background-color: var(--beige-claro);
+    color: var(--vino);
+    line-height: 1.6;
+}
+
+/* --- NAVEGACIÓN --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco-roto);
+    padding: 1rem 5%;
+    position: sticky;
+    /* Se queda pegado arriba */
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--taupe);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--vino);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--vino);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--rosa-polvo);
+}
+
+/* Menu hamburguesa (oculto en PC) */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--vino);
+    margin: 5px;
+}
+
+
+/* --- SECCIONES GENERALES --- */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--vino);
+}
+
+.section-gray {
+    background-color: var(--blanco-roto);
+    /* Alternar color de fondo */
+    border-top: 1px solid var(--taupe);
+    border-bottom: 1px solid var(--taupe);
+}
+
+
+
+/* --- HERO / HOME --- */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    /* Para que baje en celular */
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* Hace la imagen redonda */
+    object-fit: cover;
+    border: 5px solid var(--rosa-polvo);
+    box-shadow: 0 5px 15px rgba(111, 20, 23, 0.1);
+}
+
+.bio-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--rosa-polvo);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+    padding: 50px 0 50px 0;
+
+    li {
+        vertical-align: top;
+        display: inline;
+        height: 100px;
+        padding-left: 10px;
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 1px solid var(--beige-claro);
+            border-radius: 100px;
+            filter: drop-shadow(0 0 10px var(--rosa-polvo));
+            width: 50px;
+        }
+
+        img:hover {
+            filter: drop-shadow(0 0 10px #ffffff);
+        }
+    }
+}
+
+.btn-social {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--vino);
+    color: var(--blanco-roto);
+    text-decoration: none;
+    border-radius: 25px;
+    /* Botones redonditos */
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+.btn-social:hover {
+    background-color: var(--rosa-polvo);
+}
+
+/* --- TÉRMINOS Y CONDICIONES --- */
+.tos-box {
+    background-color: var(--beige-claro);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px dashed var(--taupe);
+    /* Borde punteado estilo papelería */
+}
+
+.tos-list li {
+    list-style: none;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.tos-list-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 14px;
+}
+
+.parent-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+    color: var(--vino);
+}
+
+.left-div li {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.right-div li {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+/* --- MEDIOS DE PAGO --- */
+.medios-pago {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.medios-pago img {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.pagos li {
+    list-style: none;
+    vertical-align: top;
+    display: inline;
+    padding-left: 10px;
+}
+
+/* --- PRECIOS --- */
+.prices-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background-color: var(--blanco-roto);
+    border: 1px solid var(--taupe);
+    border-radius: 20px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    /* Efecto de levitación */
+    border-color: var(--rosa-polvo);
+}
+
+.price-card h3 {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--rosa-polvo);
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+    .table-computer-distr {
+        display: flex;
+        flex-direction: row;
+        /* Alinea los elementos en fila (uno al lado del otro) */
+        justify-content: space-between;
+        /* Deja espacio equitativo entre ellos */
+        align-items: flex-start;
+        /* Alinea ambos bloques por la parte superior */
+        gap: 30px;
+        /* Espacio de separación entre la tabla y la imagen */
+        width: 100%;
+        max-width: 1200px;
+        /* O el ancho máximo que use tu diseño */
+        margin: 0 auto;
+    }
+
+    /* Distribución de anchos (puedes ajustar los porcentajes a tu gusto) */
+    .table-container {
+        flex: 1;
+        /* Toma el espacio disponible de manera flexible */
+        min-width: 50%;
+        /* Asegura que la tabla tenga buen espacio */
+    }
+
+    .example-block {
+        flex: 1;
+        max-width: 45%;
+        /* Limita el ancho del bloque de la imagen */
+    }
+
+    .example-img {
+        width: 100%;
+        /* Hace que la imagen sea responsiva y no se desborde */
+        height: auto;
+        display: block;
+    }
+}
+
+/* --- NUEVOS ESTILOS PARA LA SECCIÓN DE PRECIOS --- */
+
+.last-update {
+    text-align: center;
+    color: var(--rosa-polvo);
+    font-style: italic;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.subsection-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--vino);
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.center-text {
+    text-align: center;
+    color: var(--rosa-polvo);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--taupe);
+    margin: 50px auto;
+    width: 60%;
+    opacity: 0.5;
+}
+
+/* Caja de Aviso (Sin Firma) */
+.alert-box {
+    background-color: var(--taupe);
+    color: var(--blanco-roto);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 10px rgba(111, 20, 23, 0.2);
+}
+
+.price-highlight {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Tabla de Precios */
+.table-container {
+    overflow-x: auto;
+    /* Permite scroll lateral en celular si la tabla es muy ancha */
+}
+
+.prices-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco-roto);
+    border-radius: 15px;
+    overflow: hidden;
+    /* Para que las esquinas redondeadas funcionen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.prices-table th {
+    background-color: var(--rosa-polvo);
+    color: var(--blanco-roto);
+    padding: 15px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.prices-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--taupe);
+    color: var(--vino);
+
+    font-size: 0.8rem;
+}
+
+.prices-table .row-header {
+    background-color: var(--beige-claro);
+    font-weight: bold;
+    text-align: left;
+}
+
+.ars-price {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--taupe);
+    font-weight: normal;
+}
+
+/* Estilos específicos para Fondos (mini tarjetas) */
+.mini-card {
+    width: 220px;
+    padding: 20px;
+}
+
+/* Contenedor de Chibis */
+.chibis-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.chibi-box {
+    background-color: var(--blanco-roto);
+    border: 2px solid var(--taupe);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.chibi-box.promo {
+    border-color: var(--vino);
+    background-color: var(--beige-claro);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: var(--vino);
+    color: var(--blanco-roto);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transform: rotate(10deg);
+}
+
+.clean-list {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.clean-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed var(--taupe);
+    padding-bottom: 5px;
+}
+
+.ars-sm {
+    font-size: 0.85rem;
+    color: var(--taupe);
+}
+
+.chibi-img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Contenedor de Roblox */
+.roblox-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.roblox-box {
+    background-color: var(--blanco-roto);
+    border: 2px solid var(--taupe);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.roblox-box.promo {
+    border-color: var(--vino);
+    background-color: var(--beige-claro);
+}
+
+.roblox-img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.roblox-img:hover {
+    transform: translateY(-15px) rotate(2deg);
+    transition: transform 0.3s;
+}
+
+/* Ejemplos de Imágenes */
+.example-block {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.example-block h4 {
+    color: var(--rosa-polvo);
+    margin-bottom: 15px;
+}
+
+.example-img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.mini-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.mini-gallery img {
+    height: 450px;
+    /* Altura fija para que se vean parejas */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.mini-gallery img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* --- GALERÍA --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--vino);
+    color: var(--blanco-roto);
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- RESPONSIVE (CELULAR) --- */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Ocultar menú en móvil por defecto */
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: var(--blanco-roto);
+        width: 100%;
+        text-align: left;
+        padding: 20px 0;
+        border-bottom: 2px solid var(--taupe);
+    }
+
+    .nav-links.active {
+        padding-left: 25px;
+        display: flex;
+
+        /* Mostrar cuando se activa con JS */
+        a {
+            font-size: 1.5rem;
+        }
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--vino);
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    .burger {
+        display: block;
+        /* Mostrar icono hamburguesa */
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .bio-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .mini-gallery img {
+        height: 200px;
+    }
+
+    .mini-gallery img:hover {
+        height: 80vh;
+        position: absolute;
+        z-index: 999;
+    }
+
+    .chibi-box {
+        background-color: var(--blanco-roto);
+        border: 2px solid var(--taupe);
+        border-radius: 20px;
+        padding: 30px;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+        position: relative;
+    }
+
+    .roblox-box {
+        background-color: var(--blanco-roto);
+        border: 2px solid var(--taupe);
+        border-radius: 20px;
+        padding: 30px;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+        position: relative;
+    }
+
+}
+
+/* --- ANIMACIONES --- */
+
+/* Estilo para el contenedor (el "box") */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Para que el conejo no se salga del box */
+    position: relative;
+    margin: 50px auto;
+}
+
+/* --- Código del Conejo --- */
+.rabbit {
+    width: 5em;
+    height: 3em;
+    background: #ffffff;
+    border-radius: 70% 90% 60% 50%;
+    position: relative;
+    box-shadow: -0.2em 1em 0 -0.75em #bdb6ac;
+    transform: rotate(0deg) translate(-2em, 0);
+    animation: hop 1s infinite linear;
+    z-index: 1;
+}
+
+/* Cola, Ojo, Patas */
+.rabbit:before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: white;
+    /* tail */
+    border-radius: 100%;
+    top: 0.5em;
+    left: -0.3em;
+    box-shadow:
+        4em 0.4em 0 -0.35em #bdb6ac,
+        /* eye */
+        0.5em 1em 0 white,
+        /* back foot */
+        4em 1em 0 -0.3em white,
+        /* front foot */
+        4em 1em 0 -0.3em white,
+        4em 1em 0 -0.4em white;
+    animation: kick 1s infinite linear;
+}
+
+/* Orejas */
+.rabbit:after {
+    content: "";
+    position: absolute;
+    width: .75em;
+    height: 2em;
+    background: white;
+    border-radius: 50% 100% 0 0;
+    transform: rotate(-30deg);
+    right: 1em;
+    top: -1em;
+    border-top: 1px solid #f7f5f4;
+    border-left: 1px solid #f7f5f4;
+    box-shadow: -0.5em 0em 0 -0.1em white;
+}
+
+/* --- Animaciones --- */
+@keyframes hop {
+    20% {
+        transform: rotate(-10deg) translate(1em, -2em);
+        box-shadow: -0.2em 3em 0 -1em #bdb6ac;
+    }
+
+    40% {
+        transform: rotate(10deg) translate(3em, -4em);
+        box-shadow: -0.2em 3.25em 0 -1.1em #bdb6ac;
+    }
+
+    60%,
+    75% {
+        transform: rotate(0) translate(4em, 0);
+        box-shadow: -0.2em 1em 0 -0.75em #bdb6ac;
+    }
+}
+
+@keyframes kick {
+
+    20%,
+    50% {
+        box-shadow:
+            4em 0.4em 0 -0.35em #000000,
+            0.5em 1.5em 0 white,
+            4em 1.75em 0 -0.3em white,
+            4em 1.75em 0 -0.3em white,
+            4em 1.9em 0 -0.4em white;
+    }
+
+    40% {
+        box-shadow:
+            4em 0.4em 0 -0.35em #000000,
+            0.5em 2em 0 white,
+            4em 1.75em 0 -0.3em white,
+            4.2em 1.75em 0 -0.2em white,
+            4.4em 1.9em 0 -0.2em white;
+    }
+}
