@@ -291,6 +291,7 @@ body {
         margin: 0 auto;
     }
 
+
     .table-container {
         flex: 1;
         /* Toma el espacio disponible de manera flexible */
@@ -306,9 +307,9 @@ body {
 
     .example-img {
         width: 100%;
-        /* Hace que la imagen sea responsiva y no se desborde */
         height: auto;
         display: block;
+        margin: 0 auto;
     }
 }
 
@@ -440,6 +441,32 @@ body {
     border-color: var(--vino);
     background-color: var(--beige-claro);
 }
+
+/* Contenedor de Emojis */
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.emoji-box {
+    background-color: var(--blanco-roto);
+    border: 2px solid var(--taupe);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.emoji-img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
 
 .badge {
     position: absolute;
